@@ -59,3 +59,56 @@ export const subData = {
     },
   ],
 };
+
+export const lineData = [
+  {
+    label: "Feb",
+    revenue: 234,
+    cost: 134,
+  },
+  {
+    label: "Feb",
+    revenue: 334,
+    cost: 134,
+  },
+  {
+    label: "Feb",
+    revenue: 134,
+    cost: 134,
+  },
+  {
+    label: "Feb",
+    revenue: 34,
+    cost: 134,
+  },
+  {
+    label: "Feb",
+    revenue: 334,
+    cost: 134,
+  },
+  {
+    label: "Feb",
+    revenue: 534,
+    cost: 134,
+  },
+  {
+    label: "Feb",
+    revenue: 234,
+    cost: 234,
+  },
+  {
+    label: "Feb",
+    revenue: 334,
+    cost: 34,
+  },
+  {
+    label: "Feb",
+    revenue: 434,
+    cost: 134,
+  },
+  {
+    label: "Feb",
+    revenue: 234,
+    cost: 134,
+  },
+];

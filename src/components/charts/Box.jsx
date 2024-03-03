@@ -2,14 +2,12 @@ import { FaArrowDownLong, FaArrowUpLong } from "react-icons/fa6";
 
 const Box = (props) => {
   return (
-    <div className="box">
-      <div className="boxInfo">
-        <div className="title flex just justify-between ">
-          <span className="font-bold text-lg">{props.title}</span>
-          <span>{props.icon}</span>
-        </div>
-        <h1 className="font-bold text-3xl my-2"> {props.number} </h1>
+    <div className=" ">
+      <div className=" flex justify-between ">
+        <span className="font-bold text-lg">{props.title}</span>
+        <span>{props.icon}</span>
       </div>
+      <h1 className="font-bold text-3xl py-7"> {props.number} </h1>
       <div className="Info">
         <div className="flex items-center gap-3">
           <span

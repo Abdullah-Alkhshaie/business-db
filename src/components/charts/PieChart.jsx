@@ -1,10 +1,7 @@
-import { Chart, ArcElement, defaults } from "chart.js";
+import { Chart, ArcElement } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 
 Chart.register(ArcElement); // Register the ArcElement for Chart.js
-
-defaults.maintainAspectRatio = false;
-defaults.responsive = true;
 
 const customOptions = {
   plugins: {
@@ -22,14 +19,14 @@ const customOptions = {
 
 function PieChart({ data }) {
   return (
-    <div>
+    <div className="">
       <div>
         <h1 className="font-bold text-lg">{data.datasets[0].label}</h1>
         <p className="font-bold text-3xl my-1">{data.datasets[0].number}</p>
         <p className="text-gray-200  text- text-[12px]">since last month</p>
       </div>
       <div className="">
-        <div style={{ width: "250px", height: "250px" }}>
+        <div style={{ width: "233px", height: "233px" }}>
           <Doughnut data={data} options={customOptions || {}} />
         </div>
       </div>

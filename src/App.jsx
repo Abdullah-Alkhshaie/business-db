@@ -38,7 +38,7 @@ function App() {
               <Navbar />
             </div>
 
-            <div className="mt-16">
+            <div className="mt-16 md:mt-5">
               <Routes>
                 <Route path="/" element={<Analystics />} />
                 <Route path="/products" element={<Products />} />
