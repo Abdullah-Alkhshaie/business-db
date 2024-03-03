@@ -3,9 +3,6 @@ import { Bar } from "react-chartjs-2";
 import { useEffect, useState } from "react";
 
 function BarChart() {
-  const [selectedYear, setSelectedYear] =
-    (useState < "2021") | "2022" | ("2023" > "2021");
-
   useEffect(() => {
     Chart.register(...registerables);
   }, []);
@@ -22,43 +19,20 @@ function BarChart() {
     );
   };
 
-  const yearData = {
-    2021: [400, 300, 400, 332, 534, 476, 423, 534, 600, 433, 534, 423],
-    2022: [350, 250, 350, 282, 484, 326, 373, 484, 550, 383, 484, 173],
-    2023: [100, 200, 300, 232, 434, 276, 273, 384, 450, 283, 384, 573],
-  };
-
-  const filteredData = yearData[selectedYear] || []; // Optional chaining for safer access
+  // const yearData = {
+  //   2021: [400, 300, 400, 332, 534, 476, 423, 534, 600, 433, 534, 423],
+  //   2022: [350, 250, 350, 282, 484, 326, 373, 484, 550, 383, 484, 173],
+  //   2023: [100, 200, 300, 232, 434, 276, 273, 384, 450, 283, 384, 573],
+  // };
 
   return (
     <div>
       <div className="flex justify-between">
         <h1 className="font-bold text-lg">Sales dynamics</h1>
         <ul>
-          <li
-            className={`${
-              selectedYear === "2021" ? "active" : ""
-            } font-bold text-lg`}
-            onClick={() => setSelectedYear("2021")}
-          >
-            2021
-          </li>
-          <li
-            className={`${
-              selectedYear === "2022" ? "active" : ""
-            } font-bold text-lg`}
-            onClick={() => setSelectedYear("2022")}
-          >
-            2022
-          </li>
-          <li
-            className={`${
-              selectedYear === "2023" ? "active" : ""
-            } font-bold text-lg`}
-            onClick={() => setSelectedYear("2023")}
-          >
-            2023
-          </li>
+          <li>2021</li>
+          <li>2022</li>
+          <li>2023</li>
         </ul>
       </div>
       <div>
@@ -80,9 +54,11 @@ function BarChart() {
             ],
             datasets: [
               {
-                label: `Year ${selectedYear}`, // Dynamic label based on selected year
-                data: filteredData,
-                backgroundColor: [selectedYear],
+                label: `Year `,
+                data: [
+                  400, 300, 400, 332, 534, 476, 423, 534, 600, 433, 534, 423,
+                ],
+                backgroundColor: "blue",
                 barThickness: 10,
                 borderRadius: 10,
                 borderWidth: 0,
@@ -99,7 +75,7 @@ function BarChart() {
               },
               y: {
                 ticks: {
-                  callback: formatTick, // Use the custom formatting function
+                  callback: formatTick,
                 },
                 grid: {
                   display: false,
