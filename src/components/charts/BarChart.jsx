@@ -1,14 +1,13 @@
-import { CategoryScale, Chart, registerables } from "chart.js";
+import { Chart, registerables } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function BarChart() {
   const [selectedYear, setSelectedYear] = useState(2021);
 
-  useEffect(() => {
-    Chart.register(...registerables);
-    Chart.register(CategoryScale);
-  }, []);
+  // useEffect(() => {
+  Chart.register(...registerables);
+  // }, []);
 
   const formatTick = (tickValue) => {
     const numberValue = parseInt(tickValue.toString());
