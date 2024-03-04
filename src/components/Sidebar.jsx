@@ -6,7 +6,7 @@ import {
   MdOutlineCancel,
 } from "react-icons/md";
 import { PiSignIn, PiSignOut } from "react-icons/pi";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useStateContext } from "../context/contextProvider";
 // import man from "../data/images/man.png";
 
@@ -14,7 +14,7 @@ const links = [
   {
     title: "Analytics",
     icon: <IoMdAnalytics />,
-    path: "/",
+    path: "/business-db",
   },
   {
     title: "Products",
@@ -49,11 +49,11 @@ function Sidebar() {
       {activeMenu && (
         <>
           <div className="relative">
-            {/* <Link to="/" onClick={handleCloseSideBar}> */}
-            <h1 className="font-smibold px-2 text-2xl text-blue-500 cursor-pointer  ">
-              Business
-            </h1>
-            {/* </Link> */}
+            <Link to="/business-db" onClick={handleCloseSideBar}>
+              <h1 className="font-smibold px-2 text-2xl text-blue-500 cursor-pointer  ">
+                Business
+              </h1>
+            </Link>
             <button
               className="absolute top-0 right-0 text-lg mt-2 hover:scale-125 lg:hidden  duration-300"
               type="button"

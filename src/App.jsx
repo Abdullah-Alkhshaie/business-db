@@ -34,13 +34,13 @@ function App() {
           )}
 
           <div className={` min-h-screen w-full`}>
-            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
+            <div className=" bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
 
             <div className="mt-16 md:mt-5">
               <Routes>
-                <Route path="/" element={<Analystics />} />
+                <Route path="/business-db" element={<Analystics />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/customers" element={<Customers />} />
                 <Route path="/calendar" element={<Calendar />} />

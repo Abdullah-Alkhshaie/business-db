@@ -1,4 +1,4 @@
-import { Chart, registerables } from "chart.js";
+import { CategoryScale, Chart, registerables } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { useEffect, useState } from "react";
 
@@ -7,6 +7,7 @@ function BarChart() {
 
   useEffect(() => {
     Chart.register(...registerables);
+    Chart.register(CategoryScale);
   }, []);
 
   const formatTick = (tickValue) => {
