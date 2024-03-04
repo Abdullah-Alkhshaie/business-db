@@ -48,7 +48,7 @@ function Navbar() {
           <button type="button" onClick={() => setActiveMenu((prev) => !prev)}>
             <AiOutlineMenu
               size={25}
-              className="text-blue-500 md:hidden hover:scale-125   duration-300"
+              className="text-blue-500 lg:hidden hover:scale-125   duration-300"
             />
           </button>
         )}

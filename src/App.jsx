@@ -24,11 +24,11 @@ function App() {
       <BrowserRouter>
         <div className="flex relative ">
           {activeMenu ? (
-            <div className="w- w-96 md:w-72  sidebar  bg-white ">
+            <div className=" w-96 lg:w-72  fixed lg:relative  z-20  sidebar  bg-white ">
               <Sidebar />
             </div>
           ) : (
-            <div className="w-0 dark:bg-secondary-dark-bg">
+            <div className="w-0 over overflow-hidden">
               <Sidebar />
             </div>
           )}
