@@ -19,7 +19,7 @@ const customOptions = {
 
 function PieChart({ data }) {
   return (
-    <div className="">
+    <div className=" ">
       <div>
         <h1 className="font-bold text-lg">{data.datasets[0].label}</h1>
         <p className="font-bold text-3xl my-1">{data.datasets[0].number}</p>

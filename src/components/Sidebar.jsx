@@ -34,7 +34,7 @@ const links = [
 ];
 
 function Sidebar() {
-  const singIn = false;
+  const singIn = true;
 
   const { activeMenu, setActiveMenu, screenSize } = useStateContext();
 
