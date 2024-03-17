@@ -50,7 +50,7 @@ function Sidebar() {
         <>
           <div className="relative">
             <Link to="/business-db" onClick={handleCloseSideBar}>
-              <h1 className="font-smibold px-2 text-2xl text-blue-500 cursor-pointer  ">
+              <h1 className=" px-2 text-2xl lg:text-3xl font-bold text-blue-500 cursor-pointer  ">
                 Business
               </h1>
             </Link>
